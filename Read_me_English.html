@@ -15,6 +15,7 @@
             --text-muted: #64748b;
             --border: #e2e8f0;
             --code-bg: #f1f5f9;
+            --btn-success: #16a34a;
         }
 
         * {
@@ -125,15 +126,64 @@
             color: var(--primary);
             text-decoration: none;
             word-break: break-all;
+            font-weight: 500;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        .contact-list li {
-            list-style: none;
-            margin-bottom: 10px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+            padding: 10px;
+            background: var(--code-bg);
+            border-radius: 6px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none !important;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff !important;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #ffffff !important;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        .btn-copy {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-copy:hover {
+            background-color: #cbd5e1;
         }
 
         footer {
@@ -170,7 +220,7 @@
             <ul>
                 <li><strong>Initial Phase:</strong> My initial goal was very modest: simply enabling the screen reader to speak the main menu items.</li>
                 <li><strong>Expansion &amp; Scaling:</strong> Following the success of that first milestone, I decided to push forward, expanding the project step-by-step to include environmental scanning, entity tracking, combat, navigation, and map systems.</li>
-                <li><strong>References &amp; Documentation:</strong> Through continuous independent research, I gained access to open-source repositories documenting GTA opcodes and scripting commands on GitHub, which served as an indispensable guide for understanding the engine's internal workings.</li>
+                <li><strong>References &amp; Documentation:</strong> Through continuous independent research, I gained access to open-source repositories documenting GTA opcodes and scripting commands on GitHub and developer portals, which served as an indispensable guide for understanding the engine's internal workings.</li>
                 <li><strong>The Role of AI:</strong> I utilized Artificial Intelligence to analyze screenshots and visual game scenes to clarify certain graphical cues, as well as to assist in logical problem-solving for technical hurdles.</li>
             </ul>
         </article>
@@ -379,16 +429,25 @@
             <h2>[12] Download Links &amp; Development Resources:</h2>
             <ul>
                 <li>
+                    <strong>GTA Access Mod Download (GTA_Access v2.6):</strong><br>
+                    <a href="https://github.com/Ahmed-Hassan2006/GTA_SA_ACCESS/releases/download/2.6/GTA_Access_V2.6.zip" target="_blank" rel="noopener">Direct Download GTA_Access_V2.6.zip from GitHub</a>
+                </li>
+                <li>
                     <strong>Full Game Download (Vanilla Original):</strong><br>
                     <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">Download Game from Archive.org</a>
                 </li>
                 <li>
-                    <strong>GTA Access Mod Download (GTA_Access):</strong><br>
-                    <a href="https://example.com/gta-sa-access-mod" target="_blank" rel="noopener">Download Latest Access Layer</a>
+                    <strong>GTA Opcodes &amp; Scripting Documentation Repository:</strong><br>
+                    <a href="https://github.com/sannybuilder/library" target="_blank" rel="noopener">Sanny Builder Library on GitHub</a> | 
+                    <a href="https://library.sannybuilder.com/#/sa" target="_blank" rel="noopener">Interactive San Andreas Opcode Portal</a>
                 </li>
                 <li>
-                    <strong>GTA Opcodes &amp; Scripting Documentation Repository:</strong><br>
-                    <a href="https://github.com/sannybuilder/library" target="_blank" rel="noopener">Sanny Builder Library on GitHub</a>
+                    <strong>GTA Modding Community Wiki (SCM &amp; Opcodes Database):</strong><br>
+                    <a href="https://gtamods.com/wiki/List_of_opcodes" target="_blank" rel="noopener">GTAMods Wiki List of Opcodes</a>
+                </li>
+                <li>
+                    <strong>GTA C++ Memory &amp; Plugin Development SDK:</strong><br>
+                    <a href="https://github.com/DK22Pac/plugin-sdk" target="_blank" rel="noopener">DK22Pac Plugin-SDK on GitHub</a>
                 </li>
             </ul>
         </article>
@@ -407,12 +466,24 @@
         <!-- Section 14 -->
         <article class="section-card">
             <h2>[14] Contact, Support &amp; Feedback:</h2>
-            <p>I always welcome your suggestions, feedback, and bug reports to help me continue developing and maintaining the Access mod:</p>
-            <ul class="contact-list">
-                <li>📱 <strong>Phone / WhatsApp:</strong> <code>+201558863325</code></li>
-                <li>💬 <strong>Telegram:</strong> <a href="https://t.me/ah3376" target="_blank" rel="noopener">t.me/ah3376</a></li>
-                <li>📧 <strong>Email:</strong> <a href="mailto:ah2635670@gmail.com">ah2635670@gmail.com</a></li>
-            </ul>
+            <p style="margin-bottom: 15px;">I always welcome your suggestions, feedback, and bug reports to help me continue developing and maintaining the Access mod:</p>
+            
+            <div class="contact-item">
+                <span>📱 <strong>Phone / WhatsApp:</strong> <code>+201558863325</code></span>
+                <button type="button" class="btn btn-copy" onclick="copyText('+201558863325', this)">📋 Copy Number</button>
+                <a href="https://wa.me/201558863325" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 Message on WhatsApp</a>
+            </div>
+
+            <div class="contact-item">
+                <span>✈️ <strong>Telegram:</strong> <code>@ah3376</code></span>
+                <a href="https://t.me/ah3376" target="_blank" rel="noopener" class="btn btn-primary">Open Telegram Chat</a>
+            </div>
+
+            <div class="contact-item">
+                <span>📧 <strong>Email:</strong> <code>ah2635670@gmail.com</code></span>
+                <button type="button" class="btn btn-copy" onclick="copyText('ah2635670@gmail.com', this)">📋 Copy Email</button>
+                <a href="mailto:ah2635670@gmail.com" class="btn btn-primary">Send Email</a>
+            </div>
         </article>
     </main>
 
@@ -420,6 +491,36 @@
         <p>GTA: San Andreas Access Project &copy; 2026 — Developed by Ahmed Hassan Abdelnabi</p>
     </footer>
 </div>
+
+<script>
+function copyText(text, btnElement) {
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            handleCopiedState(btnElement);
+        });
+    } else {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        handleCopiedState(btnElement);
+    }
+}
+
+function handleCopiedState(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '✅ Copied!';
+    btn.style.backgroundColor = 'var(--btn-success)';
+    btn.style.color = '#ffffff';
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.backgroundColor = '';
+        btn.style.color = '';
+    }, 2000);
+}
+</script>
 
 </body>
 </html>
