@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA: San Andreas Access Project — The Ultimate Accessibility Layer for the Blind</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #0f172a;
+            --accent: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --code-bg: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 1.85rem;
+            margin-bottom: 10px;
+        }
+
+        .author-badge {
+            display: inline-block;
+            background: var(--code-bg);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: #334155;
+        }
+
+        .section-card {
+            margin-bottom: 30px;
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--code-bg);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin: 15px 0 8px;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        kbd {
+            background: var(--code-bg);
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background-color: #fffbeb;
+            border-left: 4px solid var(--accent);
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            color: #92400e;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-list li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>GTA: San Andreas Access Project — Accessibility Layer for the Blind</h1>
+        <div class="author-badge">Designed &amp; Developed by: Ahmed Hassan Abdelnabi</div>
+    </header>
+
+    <main>
+        <section class="intro-text">
+            <p>Peace, mercy, and blessings of God be upon you,</p>
+            <p>Warm greetings to all my friends and fellow gamers everywhere,</p>
+            <br>
+            <p><strong>Grand Theft Auto: San Andreas</strong> stands as one of the greatest open-world titles in video game history. For many years, it was a dream and passion for many visually impaired gamers, including myself. Many believed that experiencing a 3D game of this magnitude and complexity without sight was nearly impossible.</p>
+            <p>Today, I am sharing the culmination of a long, challenging journey of research, reverse engineering, and continuous development to turn this dream into a tangible and enjoyable reality through the accessibility layer: <strong>GTA: San Andreas Access</strong>.</p>
+        </section>
+
+        <!-- Section 1 -->
+        <article class="section-card">
+            <h2>[1] The Development Journey &amp; How the Project Began:</h2>
+            <p>I began my journey by investigating the architecture of the GTA game engine, exploring the possibility of modifying it, and hooking it into screen readers using custom scripts, C++, and memory hooks.</p>
+            <ul>
+                <li><strong>Initial Phase:</strong> My initial goal was very modest: simply enabling the screen reader to speak the main menu items.</li>
+                <li><strong>Expansion &amp; Scaling:</strong> Following the success of that first milestone, I decided to push forward, expanding the project step-by-step to include environmental scanning, entity tracking, combat, navigation, and map systems.</li>
+                <li><strong>References &amp; Documentation:</strong> Through continuous independent research, I gained access to open-source repositories documenting GTA opcodes and scripting commands on GitHub, which served as an indispensable guide for understanding the engine's internal workings.</li>
+                <li><strong>The Role of AI:</strong> I utilized Artificial Intelligence to analyze screenshots and visual game scenes to clarify certain graphical cues, as well as to assist in logical problem-solving for technical hurdles.</li>
+            </ul>
+        </article>
+
+        <!-- Section 2 -->
+        <article class="section-card">
+            <h2>[2] Versioning System:</h2>
+            <p>The version numbering for the Access mod follows a two-number format separated by a dot (e.g., 1.8):</p>
+            <ul>
+                <li><strong>First Number (Left - 1):</strong> Indicates the major public release deployed to end-users.</li>
+                <li><strong>Second Number (Right - 8):</strong> Represents the number of internal beta builds and iterations I tested internally before achieving a stable release.</li>
+                <li><strong>Example:</strong> Version 2.3 denotes the second major release, preceded by 3 internal testing builds.</li>
+            </ul>
+            <p><strong>Current Version:</strong> 2.6</p>
+        </article>
+
+        <!-- Section 3 -->
+        <article class="section-card">
+            <h2>[3] Full Arabic Localization &amp; The "Text Dictionary" Architecture:</h2>
+            <p>To deliver an authentic and comprehensive Arabic localization matching the original game script:</p>
+            <ol>
+                <li>I unpacked the core game text file, known as <code>american.gxt</code>.</li>
+                <li>I extracted strings, dialogues, and mission briefs for precise translation.</li>
+                <li>I programmed an internal dictionary lookup system within the accessibility layer that intercepts String IDs at runtime and replaces them with instantaneous Arabic speech output via the screen reader. As a result, the story, dialogue, and menus are fully supported in both Arabic and English.</li>
+            </ol>
+        </article>
+
+        <!-- Section 4 -->
+        <article class="section-card">
+            <h2>[4] Vehicle Driving &amp; "Ghost Mode":</h2>
+            <p>During development, I made extensive efforts to build an audio navigation and guidance system based on the game's path node grid. However, I encountered severe technical constraints; real-time audio guidance through complex lanes, tight turns, obstacle avoidance, and dynamic traffic proved overly cumbersome for the access layer.</p>
+            <ul>
+                <li><strong>Alternative Solution:</strong> I replaced this with "Vehicle Ghost Mode", toggled via (<kbd>Alt</kbd> + <kbd>G</kbd>).</li>
+                <li>This mode allows your vehicle to pass seamlessly through barriers and obstacles without collision, granting the blind player full freedom of movement without the frustration of getting stuck.</li>
+            </ul>
+        </article>
+
+        <!-- Section 5 -->
+        <article class="section-card">
+            <h2>[5] Navigation System, Angle Precision &amp; Difficulty Balancing:</h2>
+            <ul>
+                <li><strong>Target Identification:</strong> Through the Tracker Menu (<kbd>`</kbd> / Backtick) or the Map (<kbd>M</kbd>), you can check the exact distance in footsteps, as well as the target's relative angle and bearing (<kbd>O</kbd>).</li>
+                <li><strong>Instant Teleport (<kbd>Alt</kbd> + <kbd>P</kbd>):</strong> Because target angles may not be 100% precise in certain scenarios, I added an instant teleport feature to the selected target.</li>
+                <li><strong>Gameplay Challenge Balance:</strong>
+                    <ul>
+                        <li><strong>On Foot:</strong> You can utilize instant teleport (<kbd>Alt</kbd> + <kbd>P</kbd>) to reach your target directly.</li>
+                        <li><strong>In Vehicles:</strong> Instant teleport is disabled inside cars. Instead, you must align the vehicle's heading to match the target's angle, then drive forward while relying on the footstep counter and map info, preserving the challenge and joy of driving.</li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+
+        <!-- Section 6 -->
+        <article class="section-card">
+            <h2>[6] Combat System &amp; Kill Tracking:</h2>
+            <ul>
+                <li><strong>Auto-Aim (<kbd>Alt</kbd> + <kbd>T</kbd>):</strong> Locks onto the selected target or nearest threat. It does not shoot automatically on your behalf, but executes your attack commands by delivering weapon damage directly to the target without requiring visual alignment.</li>
+                <li><strong>Kill Registration:</strong> To register kills to your score, you must fire or strike manually. You can check your kill count at any time by pressing (<kbd>U</kbd>).</li>
+            </ul>
+        </article>
+
+        <!-- Section 7 -->
+        <article class="section-card">
+            <h2>[7] The Reality Regarding Story Missions:</h2>
+            <p>For complete transparency and honesty, I have not been able to make the main story missions fully playable and completable for blind players, as GTA missions rely heavily on complex, simultaneous visual reactions.</p>
+            <p><strong>Illustrative Example:</strong> In the first mission ("Sweet &amp; Kendl"), you must visit the protagonist's house, mount a bicycle, and chase your friends through narrow alleys and sharp corners while being chased and shot at by a rival gang's car. These interconnected visual complexities represent a major challenge that I hope to solve in future updates.</p>
+        </article>
+
+        <!-- Section 8 -->
+        <article class="section-card">
+            <h2>[8] Comprehensive Audio Overhaul &amp; Stereo Effects:</h2>
+            <p>Because the original game audio is relatively low-fidelity and mono-centric:</p>
+            <ul>
+                <li>I integrated patches to upgrade the audio space into clean Stereo, along with a high-fidelity dynamic sound mod (HQ Dynamic Sounds) that makes footsteps, weapon fire, engine hums, and explosions distinct and spatialized for easier directional orientation.</li>
+            </ul>
+            <div class="warning-box">
+                <strong>Technical Note:</strong> The sound mod injects audio hooks directly into memory, which in very rare instances may cause unexpected game crashes. However, its acoustic benefits and audio clarity provide an indispensable experience.<br>
+                <em>All rights reserved to: Ezekiel &amp; Rockstar Games (refer to the included Copy-Rights ©®.txt for details).</em>
+            </div>
+        </article>
+
+        <!-- Section 9 -->
+        <article class="section-card">
+            <h2>[9] Installation, Setup &amp; Language Selection:</h2>
+            <ol>
+                <li>Extract the archive using any archive manager (such as WinRAR or 7-Zip).</li>
+                <li>Copy the <code>access</code> folder, the bundled <code>.exe</code> launcher, and all included audio/stereo files.</li>
+                <li>Paste all of these files into the root directory of your GTA San Andreas installation.</li>
+                <li>Launch the game using the provided executable (<code>.exe</code>) to start the game directly with the accessibility layer.</li>
+            </ol>
+            <div class="warning-box">
+                <strong>Important Note on Access Language:</strong><br>
+                The mod defaults to English (EN). To switch the language to Arabic:
+                <ol>
+                    <li>Load into the game world.</li>
+                    <li>Press <kbd>F9</kbd> to open the Settings Menu.</li>
+                    <li>Navigate using the arrow keys to the "Language" option.</li>
+                    <li>Press <kbd>Enter</kbd> or <kbd>Space</kbd> to toggle and select Arabic (ar).</li>
+                    <li>Press <kbd>F9</kbd> or <kbd>Escape</kbd> to save and close the settings.</li>
+                </ol>
+            </div>
+        </article>
+
+        <!-- Section 10 -->
+        <article class="section-card">
+            <h2>[10] Complete Keyboard Shortcuts &amp; Hotkeys Guide:</h2>
+            
+            <h3>1. Core Game Info &amp; Speech (Core &amp; SAPI)</h3>
+            <ul>
+                <li>Check Health: <kbd>H</kbd></li>
+                <li>Check Money: <kbd>G</kbd></li>
+                <li>Check Wanted Level: <kbd>J</kbd></li>
+                <li>Check Current Zone/Location: <kbd>B</kbd></li>
+                <li>Check In-Game Clock/Time: <kbd>T</kbd></li>
+                <li>Toggle Ghost Mode: <kbd>Alt</kbd> + <kbd>G</kbd></li>
+                <li>Developer / Debug Info: <kbd>Ctrl</kbd> + <kbd>D</kbd></li>
+                <li>Mute / Unmute Screen Reader (SAPI): <kbd>Alt</kbd> + <kbd>K</kbd></li>
+                <li>Previous Speech History Item: <kbd>PageUp</kbd></li>
+                <li>Next Speech History Item: <kbd>PageDown</kbd></li>
+                <li>Jump to Start of Speech History: <kbd>Shift</kbd> + <kbd>PageUp</kbd></li>
+                <li>Jump to End of Speech History: <kbd>Shift</kbd> + <kbd>PageDown</kbd></li>
+            </ul>
+
+            <h3>2. Settings Menu</h3>
+            <ul>
+                <li>Open / Close Settings: <kbd>F9</kbd> or <kbd>Escape</kbd></li>
+                <li>Navigate Items: <kbd>Up</kbd> / <kbd>Down</kbd> Arrows</li>
+                <li>Adjust Options / Values: <kbd>Left</kbd> / <kbd>Right</kbd> Arrows</li>
+                <li>Select / Confirm Option: <kbd>Enter</kbd> or <kbd>Space</kbd></li>
+                <li>Go Back: <kbd>Backspace</kbd></li>
+            </ul>
+
+            <h3>3. Entity &amp; Target Tracker</h3>
+            <ul>
+                <li>Open / Close Tracker: <kbd>`</kbd> (Backtick) or <kbd>Escape</kbd></li>
+                <li>Navigate Targets: <kbd>Up</kbd> / <kbd>Down</kbd> / <kbd>Left</kbd> / <kbd>Right</kbd> Arrows</li>
+                <li>Jump to First / Last Target: <kbd>Home</kbd> / <kbd>End</kbd></li>
+                <li>Select &amp; Lock Target: <kbd>Enter</kbd> or <kbd>Space</kbd></li>
+                <li>Read Target Bearing/Direction: <kbd>O</kbd></li>
+                <li>Read Target Coordinates: <kbd>C</kbd></li>
+                <li>Read Target Description/Details: <kbd>N</kbd></li>
+                <li>Read Target Status: <kbd>4</kbd></li>
+            </ul>
+
+            <h3>4. Map Menu</h3>
+            <ul>
+                <li>Open / Close Map: <kbd>M</kbd>, <kbd>Escape</kbd>, or <kbd>`</kbd></li>
+                <li>Move Map Cursor: Arrow Keys (<kbd>Up</kbd> / <kbd>Down</kbd> / <kbd>Left</kbd> / <kbd>Right</kbd>)</li>
+                <li>Enable Cursor Mode: <kbd>1</kbd></li>
+                <li>Enable List Mode: <kbd>2</kbd></li>
+                <li>Select Location: <kbd>Enter</kbd> or <kbd>Space</kbd></li>
+                <li>Go Back: <kbd>Backspace</kbd></li>
+                <li>Read Selected Point Direction: <kbd>O</kbd></li>
+                <li>Read Selected Point Coordinates: <kbd>C</kbd></li>
+            </ul>
+
+            <h3>5. Navigation &amp; Teleportation</h3>
+            <ul>
+                <li>Instant Teleport to Selected Target: <kbd>Alt</kbd> + <kbd>P</kbd></li>
+                <li>Auto-Travel: <kbd>P</kbd></li>
+                <li>Interact with Nearby Entities (if available): <kbd>Tab</kbd></li>
+                <li>Track Target Bearing: <kbd>O</kbd></li>
+                <li>Track Coordinates: <kbd>C</kbd></li>
+                <li>Read Compass Bearing: <kbd>F</kbd></li>
+                <li>Rotate Player Clockwise: <kbd>Alt</kbd> + <kbd>Z</kbd></li>
+                <li>Rotate Player Counter-Clockwise: <kbd>Alt</kbd> + <kbd>X</kbd></li>
+            </ul>
+
+            <h3>6. Combat &amp; Weapons</h3>
+            <ul>
+                <li>Toggle Auto-Aim Combat: <kbd>Alt</kbd> + <kbd>T</kbd></li>
+                <li>Read Combat Stats &amp; Kill Count: <kbd>U</kbd></li>
+                <li>Show / Hide Combat HUD Info: <kbd>Alt</kbd> + <kbd>U</kbd></li>
+            </ul>
+
+            <h3>7. Audio Radar</h3>
+            <ul>
+                <li>Toggle Audio Radar: <kbd>Alt</kbd> + <kbd>R</kbd></li>
+            </ul>
+
+            <h3>8. Vehicle Driving Info</h3>
+            <ul>
+                <li>Read Vehicle Speed: <kbd>,</kbd> (Comma)</li>
+                <li>Read Vehicle Direction/Heading: <kbd>.</kbd> (Period) or <kbd>/</kbd> (Slash)</li>
+            </ul>
+
+            <h3>9. Cheat Menu</h3>
+            <ul>
+                <li>Open / Close Cheat Menu: <kbd>F2</kbd>, <kbd>Escape</kbd>, or <kbd>Backspace</kbd></li>
+                <li>Navigate Cheats: Arrow Keys or <kbd>W</kbd> / <kbd>S</kbd></li>
+                <li>Jump to First / Last Cheat: <kbd>Home</kbd> / <kbd>End</kbd></li>
+                <li>Read Cheat Description: <kbd>D</kbd></li>
+                <li>Activate Cheat: <kbd>Enter</kbd> or <kbd>Space</kbd></li>
+            </ul>
+        </article>
+
+        <!-- Section 11 -->
+        <article class="section-card">
+            <h2>[11] Tested &amp; Compatible GTA Versions:</h2>
+            <p>The Access mod has been thoroughly tested and confirmed fully functional on the original vanilla release of <strong>GTA San Andreas</strong> as well as the <strong>GTA Egypt</strong> modded edition.</p>
+            <p>I have not personally tested it on other mods or custom distributions, so you are welcome to test and share your results with me.</p>
+        </article>
+
+        <!-- Section 12 -->
+        <article class="section-card">
+            <h2>[12] Download Links &amp; Development Resources:</h2>
+            <ul>
+                <li>
+                    <strong>Full Game Download (Vanilla Original):</strong><br>
+                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">Download Game from Archive.org</a>
+                </li>
+                <li>
+                    <strong>GTA Access Mod Download (GTA_Access):</strong><br>
+                    <a href="https://example.com/gta-sa-access-mod" target="_blank" rel="noopener">Download Latest Access Layer</a>
+                </li>
+                <li>
+                    <strong>GTA Opcodes &amp; Scripting Documentation Repository:</strong><br>
+                    <a href="https://github.com/sannybuilder/library" target="_blank" rel="noopener">Sanny Builder Library on GitHub</a>
+                </li>
+            </ul>
+        </article>
+
+        <!-- Section 13 -->
+        <article class="section-card">
+            <h2>[13] Intellectual Property &amp; Terms of Use:</h2>
+            <ul>
+                <li>This project was designed, coded, and developed entirely by: <strong>Ahmed Hassan Abdelnabi</strong>.</li>
+                <li><strong>Distribution &amp; Sharing:</strong> Open and welcome for sharing across all communities and platforms, provided full attribution to the author is retained.</li>
+                <li><strong>Strict Notice:</strong> Modifying, reverse-engineering, or tampering with the Access files without prior explicit permission from the author is strictly prohibited.</li>
+                <li>The developer assumes no responsibility for modified or altered versions distributed by third parties.</li>
+            </ul>
+        </article>
+
+        <!-- Section 14 -->
+        <article class="section-card">
+            <h2>[14] Contact, Support &amp; Feedback:</h2>
+            <p>I always welcome your suggestions, feedback, and bug reports to help me continue developing and maintaining the Access mod:</p>
+            <ul class="contact-list">
+                <li>📱 <strong>Phone / WhatsApp:</strong> <code>+201558863325</code></li>
+                <li>💬 <strong>Telegram:</strong> <a href="https://t.me/ah3376" target="_blank" rel="noopener">t.me/ah3376</a></li>
+                <li>📧 <strong>Email:</strong> <a href="mailto:ah2635670@gmail.com">ah2635670@gmail.com</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>GTA: San Andreas Access Project &copy; 2026 — Developed by Ahmed Hassan Abdelnabi</p>
+    </footer>
+</div>
+
+</body>
+</html>
