@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع GTA: San Andreas Access — أضخم طبقة وصول للمكفوفين</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #0f172a;
+            --accent: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --code-bg: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 1.85rem;
+            margin-bottom: 10px;
+        }
+
+        .author-badge {
+            display: inline-block;
+            background: var(--code-bg);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: #334155;
+        }
+
+        .section-card {
+            margin-bottom: 30px;
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--code-bg);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin: 15px 0 8px;
+        }
+
+        ul, ol {
+            padding-right: 22px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        kbd {
+            background: var(--code-bg);
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background-color: #fffbeb;
+            border-right: 4px solid var(--accent);
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            color: #92400e;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-list li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>مشروع GTA: San Andreas Access — أضخم طبقة وصول للمكفوفين</h1>
+        <div class="author-badge">تصميم وتطوير: أحمد حسن عبد النبي (Ahmed Hassan Abdelnabi)</div>
+    </header>
+
+    <main>
+        <section class="intro-text">
+            <p>السلام عليكم ورحمة الله وبركاته،</p>
+            <p>تحياتي لكم جميعاً أصدقائي وإخواني في كل مكان،</p>
+            <br>
+            <p>لعبة <strong>Grand Theft Auto: San Andreas</strong> هي واحدة من أعظم ألعاب العالم المفتوح في تاريخ ألعاب الفيديو، وكانت لسنوات طويلة حلماً وشغفاً للكثير من المكفوفين وأنا واحد منهم. كان الكثير يرى أن تجربة لعبة ثلاثية الأبعاد بهذا الحجم والتعقيد بدون بصر هي أمر شبه مستحيل.</p>
+            <p>اليوم، أشارككم خلاصة رحلة طويلة وشاقة من البحث، التعديل البرمجي، والتطوير المستمر لتحويل هذا الحلم إلى واقع حقيقي وممتع من خلال طبقة الوصول: <strong>GTA: San Andreas Access</strong>.</p>
+        </section>
+
+        <!-- القسم الأول -->
+        <article class="section-card">
+            <h2>[1] رحلة التطوير البرمجي وكيف بدأ المشروع:</h2>
+            <p>بدأتُ رحلتي بالبحث في بنية محرك لعبة جاتا (Game Engine) وإمكانية التعديل عليه وربطه بقارئات الشاشة باستخدام السكربتات ولغة ++C والتعامل مع الذاكرة (Memory Hooks).</p>
+            <ul>
+                <li><strong>في البداية:</strong> كان هدفي بسيطاً جداً ومحدوداً، وهو فقط جعل قارئ الشاشة ينطق نصوص القوائم الرئيسية.</li>
+                <li><strong>التوسع والتطوير:</strong> مع نجاح الخطوة الأولى، قررتُ عدم التوقف، وبدأتُ أطور المشروع خطوة بخطوة ليشمل فحص البيئة المحيطة، وتتبع الكائنات، والقتال، والملاحة، والخرائط.</li>
+                <li><strong>المراجع والتوثيق البرمجي:</strong> من خلال بحثي الشخصي واطلاعي المستمر، تمكنتُ من الوصول إلى المستودعات البرمجية المفتوحة المتخصصة في توثيق أوامر وسكربتات ألعاب جاتا (Opcodes &amp; Scripting Commands) على منصة GitHub، والتي كانت دليلاً أساسياً لفهم آليات عمل المحرك الداخلية.</li>
+                <li><strong>دور الذكاء الاصطناعي:</strong> استعنتُ بالذكاء الاصطناعي في تحليل بعض الصور ولقطات شاشة اللعبة لتوضيح بعض التفاصيل البصرية، والمساعدة في التفكير المنطقي لابتكار حلول لبعض العقبات.</li>
+            </ul>
+        </article>
+
+        <!-- القسم الثاني -->
+        <article class="section-card">
+            <h2>[2] نظام قراءة وتسمية إصدارات الأكسس (Versioning System):</h2>
+            <p>يعتمد ترقيم إصدارات طبقة الوصول (Access) على صيغة مكونة من رقمين يفصل بينهما نقطة (مثال: 1.8):</p>
+            <ul>
+                <li><strong>الرقم الأول (على اليسار - 1):</strong> يوضح رقم النسخة الرسمية الكبرى التي تم إطلاقها ومشاركتها لعامة المستخدمين.</li>
+                <li><strong>الرقم الثاني (على اليمين - 8):</strong> يوضح عدد النسخ والإصدارات التجريبية (Beta Builds) التي قمتُ بتجربتها واختبارها داخلياً حتى وصلتُ إلى هذا الإصدار المستقر.</li>
+                <li><strong>مثال:</strong> إصدار 2.3 يعني أن هذه هي النسخة العامة الثانية، وقد سبقتها 3 نسخ تجريبية للوصول إليها.</li>
+            </ul>
+            <p><strong>الإصدار الحالي:</strong> 2.6</p>
+        </article>
+
+        <!-- القسم الثالث -->
+        <article class="section-card">
+            <h2>[3] ملحمة التعريب الكامل وفكرة "قاموس النصوص":</h2>
+            <p>لتقديم تجربة عربية أصلية ومتكاملة تحاكي النص الأصلي للعبة:</p>
+            <ol>
+                <li>قمتُ بتفكيك الملف النصي الأساسي للعبة المعروف باسم <code>american.gxt</code>.</li>
+                <li>استخرجتُ النصوص، الحوارات، والمهمات لترجمتها بشكل دقيق.</li>
+                <li>قمتُ ببرمجة نظام داخل طبقة الوصول يعمل بمبدأ القاموس (Dictionary Lookup System)، حيث يقوم باعتراض المعرفات النصية (String IDs) داخل اللعبة واستبدالها بالترجمة العربية المنطوقة فورياً عبر قارئ الشاشة؛ وبذلك أصبحت قصة اللعبة وحواراتها وقوائمها مدعومة بالكامل باللغتين العربية والإنجليزية.</li>
+            </ol>
+        </article>
+
+        <!-- القسم الرابع -->
+        <article class="section-card">
+            <h2>[4] قيادة المركبات وفكرة "وضع الشبح" (Ghost Mode):</h2>
+            <p>أثناء التطوير، حاولتُ جاهداً بناء نظام ملاحة وتوجيه صوتي للمركبات يعتمد على قراءة شبكة مسارات اللعبة (Path Nodes)، ولكن واجهتني صعوبات تقنية بالغة؛ حيث إن تتبع حارات الطرق المعقدة والانعطافات بدقة صوتية في الوقت الحقيقي وتفادي العوائق وحركة السير المفاجئة أمر بالغ التعقيد لطبقة الوصول.</p>
+            <ul>
+                <li><strong>الحل البرمجي البديل:</strong> استبدلتُ ذلك بـ "وضع الشبح للمركبات" (Ghost Mode) عبر الاختصار (<kbd>Alt</kbd> + <kbd>G</kbd>).</li>
+                <li>هذا الوضع يتيح لمركبتك المرور عبر الحواجز والمجسمات دون الاصطدام بها، مما يمنح الكفيف حرية الحركة دون القلق من العوائق.</li>
+            </ul>
+        </article>
+
+        <!-- القسم الخامس -->
+        <article class="section-card">
+            <h2>[5] نظام الملاحة، دقة الزوايا، وتوازن الصعوبة:</h2>
+            <ul>
+                <li><strong>معرفة الأهداف:</strong> من خلال قائمة التتبع (مفتاح <kbd>`</kbd> / ذال) أو الخريطة (<kbd>M</kbd>)، يمكنك معرفة المسافة بدقة عالية مقاسة بالخطوات، بالإضافة لزاوية واتجاه الهدف (<kbd>O</kbd>).</li>
+                <li><strong>الانتقال الفوري (<kbd>Alt</kbd> + <kbd>P</kbd>):</strong> نظراً لأن زاوية الكائنات قد لا تكون دقيقة بنسبة 100% في بعض الظروف، أضفتُ ميزة الانتقال الفوري للهدف.</li>
+                <li><strong>موازنة التحدي في اللعبة:</strong>
+                    <ul>
+                        <li><strong>على الأقدام:</strong> يمكنك استخدام ميزة الانتقال الفوري (<kbd>Alt</kbd> + <kbd>P</kbd>) للوصول للهدف مباشرة.</li>
+                        <li><strong>داخل المركبات:</strong> الانتقال الفوري لا يعمل داخل السيارة، بل يتعين عليك ضبط زاوية المركبة لتطابق زاوية الهدف المنشود، ثم القيادة إلى الأمام حتى تصل إلى وجهتك بالاعتماد على عداد الخطوات والخريطة، لتبقى متعة القيادة والتحدي قائمة.</li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+
+        <!-- القسم السادس -->
+        <article class="section-card">
+            <h2>[6] نظام القتال واحتساب القتلى:</h2>
+            <ul>
+                <li><strong>التصويب التلقائي (<kbd>Alt</kbd> + <kbd>T</kbd>):</strong> يقوم بالإغلاق على الهدف المحدد أو أقرب خطر، ولكنه لا يطلق النار نيابة عنك، بل ينفذ أوامرك في القتال؛ حيث يرسل الضرر الواقع من السلاح للهدف دون أن تضطر لتوجيه السلاح بصرياً تجاهه.</li>
+                <li><strong>احتساب القتلى:</strong> لكي يتم احتساب عملية القتل في رصيدك، يجب عليك توجيه الضربات أو إطلاق النار بنفسك، ويمكنك معرفة عدد القتلى الذين أسقطتهم من خلال الضغط على حرف (<kbd>U</kbd>).</li>
+            </ul>
+        </article>
+
+        <!-- القسم السابع -->
+        <article class="section-card">
+            <h2>[7] الحقيقة بخصوص مهمات القصة (Missions):</h2>
+            <p>للأمانة والوضوح؛ لم أتمكن من جعل مهام قصة اللعبة قابلة للعب والإنهاء الكامل للكفيف؛ لأن مهمات جاتا تعتمد كلياً على ردود الفعل البصرية المعقدة والمتزامنة.</p>
+            <p><strong>مثال توضيحي:</strong> في المهمة الأولى للعبة (Sweet &amp; Kendl)، يجب عليك الذهاب لبيت اللاعب، ثم ركوب دراجة هوائية ومطاردة أصدقائك عبر أزقة ضيقة ومنعطفات سريعة، بينما تهاجمك سيارة عصابة معادية تطلق النار عليك من الخلف. هذه التعقيدات البصرية المتشابكة تمثل تحدياً كبيراً جداً آملُ في إيجاد حلول له مستقبلاً.</p>
+        </article>
+
+        <!-- القسم الثامن -->
+        <article class="section-card">
+            <h2>[8] الترقية الصوتية الشاملة ومؤثرات الاستريو:</h2>
+            <p>نظراً لأن أصوات اللعبة الأصلية ضعيفة وأحادية التوزيع:</p>
+            <ul>
+                <li>قمتُ بدمج ملفات لتحسين توزيع الصوت إلى نظام Stereo نقي، بالإضافة إلى مود صوتي واقعي عالي الجودة (HQ Dynamic Sounds) يجعل أصوات الخطوات، الأسلحة، المحركات، والانفجارات واضحة ومجسمة لتسهيل تحديد الاتجاهات.</li>
+            </ul>
+            <div class="warning-box">
+                <strong>ملاحظة تقنية:</strong> مود الصوت يقوم بتعديل الأصوات بالحقن المباشر في الذاكرة، وهو ما قد يسبب في حالات نادرة جداً إغلاقاً مفاجئاً للعبة، ولكن فائدته السمعية وجودته العالية تعطي تجربة لا غنى عنها.<br>
+                <em>حقوق المود محفوظة لـ: Ezekiel &amp; Rockstar Games (اقرأ ملف Copy-Rights ©®.txt المرفق مع المود للمزيد).</em>
+            </div>
+        </article>
+
+        <!-- القسم التاسع -->
+        <article class="section-card">
+            <h2>[9] خطوات التثبيت والتشغيل وضبط اللغة:</h2>
+            <ol>
+                <li>فك ضغط الملف باستخدام أي برنامج ضغط (مثل WinRAR أو 7-Zip).</li>
+                <li>انسخ مجلد <code>access</code>، وملف التشغيل (<code>.exe</code>) المرفق، وباقي ملفات الصوت والاستريو.</li>
+                <li>الصق جميع هذه الملفات في المجلد الرئيسي للعبة GTA San Andreas.</li>
+                <li>شغّل اللعبة من خلال ملف التشغيل المرفق (<code>.exe</code>) لتبدأ اللعبة مع طبقة الوصول مباشرة.</li>
+            </ol>
+            <div class="warning-box">
+                <strong>ملاحظة هامة جداً بخصوص لغة الأكسس:</strong><br>
+                يأتي الأكسس مضبوطاً باللغة الإنجليزية افتراضياً (EN). لتغيير اللغة إلى اللغة العربية:
+                <ol>
+                    <li>ادخل أولاً إلى داخل عالم اللعبة.</li>
+                    <li>اضغط على المفتاح <kbd>F9</kbd> لفتح قائمة الإعدادات (Settings).</li>
+                    <li>تحرك بالأسهم حتى تصل إلى خيار اللغة (Language).</li>
+                    <li>اضغط مفتاح <kbd>Enter</kbd> أو <kbd>Space</kbd> لتعديل الخيار واختيار اللغة العربية (ar).</li>
+                    <li>اضغط <kbd>F9</kbd> أو <kbd>Escape</kbd> لحفظ الإعدادات والخروج من القائمة.</li>
+                </ol>
+            </div>
+        </article>
+
+        <!-- القسم العاشر -->
+        <article class="section-card">
+            <h2>[10] دليل مفاتيح واختصارات التحكم الكاملة (Hotkeys):</h2>
+            
+            <h3>أولاً: معلومات اللعبة والراوي الأساسية (Core &amp; SAPI)</h3>
+            <ul>
+                <li>قراءة مستوى الصحة (Health): <kbd>H</kbd></li>
+                <li>قراءة رصيد المال (Money): <kbd>G</kbd></li>
+                <li>قراءة مستوى ملاحقة الشرطة (Wanted Level): <kbd>J</kbd></li>
+                <li>قراءة اسم المنطقة والموقع الحالي: <kbd>B</kbd></li>
+                <li>قراءة ساعة ووقت اللعبة (Clock): <kbd>T</kbd></li>
+                <li>تشغيل / إيقاف وضع الشبح (Ghost Mode): <kbd>Alt</kbd> + <kbd>G</kbd></li>
+                <li>قراءة معلومات المطور والتصحيح (Debug Info): <kbd>Ctrl</kbd> + <kbd>D</kbd></li>
+                <li>كتم / تشغيل صوت قارئ الشاشة (SAPI Mute): <kbd>Alt</kbd> + <kbd>K</kbd></li>
+                <li>الانتقال للعنصر السابق في سجل النطق: <kbd>PageUp</kbd></li>
+                <li>الانتقال للعنصر التالي في سجل النطق: <kbd>PageDown</kbd></li>
+                <li>الانتقال لأول السجل: <kbd>Shift</kbd> + <kbd>PageUp</kbd></li>
+                <li>الانتقال لآخر السجل: <kbd>Shift</kbd> + <kbd>PageDown</kbd></li>
+            </ul>
+
+            <h3>ثانياً: قائمة الإعدادات (Settings Menu)</h3>
+            <ul>
+                <li>فتح / إغلاق الإعدادات: <kbd>F9</kbd> أو <kbd>Escape</kbd></li>
+                <li>التنقل بين العناصر: الأسهم لأعلى / لأسفل (<kbd>Up</kbd> / <kbd>Down</kbd>)</li>
+                <li>تعديل القيم والخيارات: الأسهم لليمين / لليسار (<kbd>Left</kbd> / <kbd>Right</kbd>)</li>
+                <li>الدخول / تأكيد الخيار: <kbd>Enter</kbd> أو مسافة (<kbd>Space</kbd>)</li>
+                <li>العودة للخلف: مسافة للخلف (<kbd>Backspace</kbd>)</li>
+            </ul>
+
+            <h3>ثالثاً: قائمة التتبع والأهداف (Tracker)</h3>
+            <ul>
+                <li>فتح / إغلاق قائمة التتبع: <kbd>`</kbd> (مفتاح ذال / Backtick) أو <kbd>Escape</kbd></li>
+                <li>التنقل بين الأهداف: الأسهم (<kbd>Up</kbd> / <kbd>Down</kbd> / <kbd>Left</kbd> / <kbd>Right</kbd>)</li>
+                <li>الانتقال لأول / لآخر القائمة: <kbd>Home</kbd> / <kbd>End</kbd></li>
+                <li>اختيار وتثبيت الهدف: <kbd>Enter</kbd> أو <kbd>Space</kbd></li>
+                <li>معرفة اتجاه الهدف: <kbd>O</kbd></li>
+                <li>معرفة إحداثيات الهدف: <kbd>C</kbd></li>
+                <li>وصف وتفاصيل الهدف: <kbd>N</kbd></li>
+                <li>معرفة حالة الهدف (Status): <kbd>4</kbd></li>
+            </ul>
+
+            <h3>رابعاً: الخريطة (Map Menu)</h3>
+            <ul>
+                <li>فتح / إغلاق الخريطة: <kbd>M</kbd> أو <kbd>Escape</kbd> أو <kbd>`</kbd></li>
+                <li>تحريك المؤشر: الأسهم (<kbd>Up</kbd> / <kbd>Down</kbd> / <kbd>Left</kbd> / <kbd>Right</kbd>)</li>
+                <li>تفعيل وضع المؤشر (Cursor Mode): <kbd>1</kbd></li>
+                <li>تفعيل وضع القائمة (List Mode): <kbd>2</kbd></li>
+                <li>الدخول والاختيار: <kbd>Enter</kbd> أو <kbd>Space</kbd></li>
+                <li>الرجوع للخلف: <kbd>Backspace</kbd></li>
+                <li>قراءة اتجاه الموقع المحدد: <kbd>O</kbd></li>
+                <li>قراءة إحداثيات الموقع: <kbd>C</kbd></li>
+            </ul>
+
+            <h3>خامساً: الملاحة والتوجيه والانتقال (Navigation &amp; Teleport)</h3>
+            <ul>
+                <li>الانتقال الفوري المباشر للهدف المحدد: <kbd>Alt</kbd> + <kbd>P</kbd></li>
+                <li>الانتقال التلقائي: <kbd>P</kbd></li>
+                <li>التفاعل مع الكائنات القريبة إذا كان هذا ممكناً: <kbd>Tab</kbd></li>
+                <li>متابعة اتجاه الهدف: <kbd>O</kbd></li>
+                <li>متابعة الإحداثيات: <kbd>C</kbd></li>
+                <li>قراءة اتجاه البوصلة (Bearing): <kbd>F</kbd></li>
+                <li>تدوير اللاعب مع اتجاه عقارب الساعة: <kbd>Alt</kbd> + <kbd>Z</kbd></li>
+                <li>تدوير اللاعب عكس اتجاه عقارب الساعة: <kbd>Alt</kbd> + <kbd>X</kbd></li>
+            </ul>
+
+            <h3>سادساً: القتال والأسلحة (Combat &amp; Weapons)</h3>
+            <ul>
+                <li>تفعيل القتال والتصويب التلقائي: <kbd>Alt</kbd> + <kbd>T</kbd></li>
+                <li>قراءة إحصائيات القتال وعدد القتلى: <kbd>U</kbd></li>
+                <li>إظهار / إخفاء لوحة معلومات القتال: <kbd>Alt</kbd> + <kbd>U</kbd></li>
+            </ul>
+
+            <h3>سابعاً: الرادار الصوتي (Radar)</h3>
+            <ul>
+                <li>تشغيل / إيقاف الرادار الصوتي: <kbd>Alt</kbd> + <kbd>R</kbd></li>
+            </ul>
+
+            <h3>ثامناً: معلومات قيادة المركبات (Vehicle Info)</h3>
+            <ul>
+                <li>قراءة سرعة المركبة: <kbd>,</kbd> (الفاصلة / Comma)</li>
+                <li>قراءة اتجاه سير المركبة: <kbd>.</kbd> (النقطة / Period) أو <kbd>/</kbd> (Slash)</li>
+            </ul>
+
+            <h3>تاسعاً: قائمة الشفرات والمساعدات (Cheat Menu)</h3>
+            <ul>
+                <li>فتح / إغلاق قائمة الشفرات: <kbd>F2</kbd> أو <kbd>Escape</kbd> أو <kbd>Backspace</kbd></li>
+                <li>التنقل في القائمة: الأسهم أو مفتاحي (<kbd>W</kbd> / <kbd>S</kbd>)</li>
+                <li>الانتقال لأول / لآخر شفرة: <kbd>Home</kbd> / <kbd>End</kbd></li>
+                <li>قراءة وصف وتفاصيل الشفرة: <kbd>D</kbd></li>
+                <li>تفعيل الشفرة: <kbd>Enter</kbd> أو <kbd>Space</kbd></li>
+            </ul>
+        </article>
+
+        <!-- القسم الحادي عشر -->
+        <article class="section-card">
+            <h2>[11] نسخ GTA المتوافقة والمجربة:</h2>
+            <p>تمت تجربة طبقة الوصول بنجاح تام على النسخة الأصلية من GTA San Andreas وكذلك على نسخة جاتا المصرية (GTA Egypt).</p>
+            <p>لم أقم بتجربة الأكسس على باقي النسخ والتعديلات، لذا أرجو منكم التجربة ومشاركتي بنتائجكم.</p>
+        </article>
+
+        <!-- القسم الثاني عشر -->
+        <article class="section-card">
+            <h2>[12] روابط التحميل والمصادر البرمجية:</h2>
+            <ul>
+                <li>
+                    <strong>رابط تحميل اللعبة كاملة (النسخة الأصلية):</strong><br>
+                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">تحميل اللعبة من Archive.org</a>
+                </li>
+                <li>
+                    <strong>رابط تحميل طبقة الوصول (GTA_Access):</strong><br>
+                    <a href="https://example.com/gta-sa-access-mod" target="_blank" rel="noopener">تحميل أحدث إصدار من الأكسس</a>
+                </li>
+                <li>
+                    <strong>المستودع البرمجي لتوثيق أوامر وسكربتات جاتا على GitHub:</strong><br>
+                    <a href="https://github.com/sannybuilder/library" target="_blank" rel="noopener">مكتبة Sanny Builder على GitHub</a>
+                </li>
+            </ul>
+        </article>
+
+        <!-- القسم الثالث عشر -->
+        <article class="section-card">
+            <h2>[13] حقوق الملكية الفكرية وسياسة الاستخدام:</h2>
+            <ul>
+                <li>هذا المشروع تم تصميمه وبرمجته وتطويره بالكامل بواسطة: <strong>أحمد حسن عبد النبي (Ahmed Hassan Abdelnabi)</strong>.</li>
+                <li><strong>المشاركة والنشر:</strong> متاح ومرحب بنشره ومشاركته في كل المجتمعات والمنصات مع الحفاظ الكامل على اسم المطور وحقوقه الأصلية.</li>
+                <li><strong>تنبيه صارم:</strong> يُمنع منعاً باتاً التعديل على ملفات الأكسس إلا بإذن مسبق وصريح من المطور.</li>
+                <li>المطور غير مسؤول عن أي نسخة تم التعديل عليها أو العبث بملفاتها من قِبل أطراف أخرى.</li>
+            </ul>
+        </article>
+
+        <!-- القسم الرابع عشر -->
+        <article class="section-card">
+            <h2>[14] للتواصل والدعم الفني وتلقي الاقتراحات:</h2>
+            <p>أرحبُ دائماً باقتراحاتكم، ملاحظاتكم، والإبلاغ عن أي أخطاء لتطوير وتحديث الأكسس مستقبلاً:</p>
+            <ul class="contact-list">
+                <li>📱 <strong>هاتف / واتساب:</strong> <code>01558863325</code> (من خارج مصر: <code>+201558863325</code>)</li>
+                <li>💬 <strong>تيليجرام:</strong> <a href="https://t.me/ah3376" target="_blank" rel="noopener">t.me/ah3376</a></li>
+                <li>📧 <strong>البريد الإلكتروني:</strong> <a href="mailto:ah2635670@gmail.com">ah2635670@gmail.com</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>مشروع GTA: San Andreas Access &copy; 2026 — تطوير أحمد حسن عبد النبي</p>
+    </footer>
+</div>
+
+</body>
+</html>
