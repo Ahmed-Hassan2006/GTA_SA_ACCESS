@@ -33,7 +33,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 35px;
@@ -90,7 +90,7 @@
         h3 {
             color: var(--accent);
             font-size: 1.1rem;
-            margin: 15px 0 8px;
+            margin: 18px 0 8px;
         }
 
         ul, ol {
@@ -111,6 +111,20 @@
             font-size: 0.95rem;
             color: #0f172a;
             font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+            padding: 14px;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
         }
 
         .warning-box {
@@ -220,7 +234,7 @@
             <ul>
                 <li><strong>Initial Phase:</strong> My initial goal was very modest: simply enabling the screen reader to speak the main menu items.</li>
                 <li><strong>Expansion &amp; Scaling:</strong> Following the success of that first milestone, I decided to push forward, expanding the project step-by-step to include environmental scanning, entity tracking, combat, navigation, and map systems.</li>
-                <li><strong>References &amp; Documentation:</strong> Through continuous independent research, I gained access to open-source repositories documenting GTA opcodes and scripting commands on GitHub and developer portals, which served as an indispensable guide for understanding the engine's internal workings.</li>
+                <li><strong>References &amp; Documentation:</strong> Through continuous independent research, I gained access to open-source repositories documenting GTA opcodes and scripting commands on GitHub and specialized technical portals, which served as an indispensable guide for understanding the engine's internal workings.</li>
                 <li><strong>The Role of AI:</strong> I utilized Artificial Intelligence to analyze screenshots and visual game scenes to clarify certain graphical cues, as well as to assist in logical problem-solving for technical hurdles.</li>
             </ul>
         </article>
@@ -309,7 +323,13 @@
                 <li>Extract the archive using any archive manager (such as WinRAR or 7-Zip).</li>
                 <li>Copy the <code>access</code> folder, the bundled <code>.exe</code> launcher, and all included audio/stereo files.</li>
                 <li>Paste all of these files into the root directory of your GTA San Andreas installation.</li>
-                <li>Launch the game using the provided executable (<code>.exe</code>) to start the game directly with the accessibility layer.</li>
+                <li>
+                    <strong>Critical Technical Note:</strong> Ensure that the game executable inside your game folder is strictly named in UPPERCASE: <code>GTA_SA.exe</code> so that the Access mod process hook can correctly detect and attach to the game.
+                </li>
+                <li>
+                    <strong>Installation Tip:</strong> It is recommended (as an optional best practice) to delete old log files from the <code>access</code> folder, such as <code>nvda_plugin.log</code> and <code>speech.log</code>, so that a fresh session log is recorded instead of appending to outdated history.
+                </li>
+                <li>Launch the game using the executable to start playing with the accessibility layer immediately.</li>
             </ol>
             <div class="warning-box">
                 <strong>Important Note on Access Language:</strong><br>
@@ -417,24 +437,69 @@
             </ul>
         </article>
 
-        <!-- Section 11 -->
+        <!-- Section 11: FAQ & Troubleshooting -->
         <article class="section-card">
-            <h2>[11] Tested &amp; Compatible GTA Versions:</h2>
-            <p>The Access mod has been thoroughly tested and confirmed fully functional on the original vanilla release of <strong>GTA San Andreas</strong> as well as the <strong>GTA Egypt</strong> modded edition.</p>
-            <p>I have not personally tested it on other mods or custom distributions, so you are welcome to test and share your results with me.</p>
+            <h2>[11] Frequently Asked Questions &amp; Troubleshooting (FAQ):</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q1: Game requests a legacy runtime or throws an error related to DirectX / vorbisFile.dll?</div>
+                <p><strong>Technical Cause &amp; Solution:</strong> GTA: San Andreas was designed around <code>DirectX 9.0c</code> and legacy <code>DirectPlay</code> components. Modern Windows (Windows 10 / 11) ships with DirectX 12 by default without old D3D9 libraries. To resolve this:</p>
+                <ol>
+                    <li>Make sure to replace the default <code>vorbisFile.dll</code> with the one bundled in the Access / ASI Loader package.</li>
+                    <li>Enable <strong>DirectPlay</strong> via: <em>Control Panel $\rightarrow$ Programs and Features $\rightarrow$ Turn Windows features on or off $\rightarrow$ Legacy Components $\rightarrow$ DirectPlay</em>.</li>
+                    <li>If the error persists, install the official <strong>DirectX End-User Runtimes (June 2010)</strong> package from Microsoft (link provided below).</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q2: The game does not launch at all, or crashes instantly upon entering the world?</div>
+                <p><strong>Cause &amp; Solution:</strong> Some modded or pirated GTA versions conflict with the <code>ModLoader</code> hook. Solution: Open your root game folder and remove or rename <code>modloader.asi</code>, then launch the game again.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q3: Game crashes unexpectedly during active gameplay and free roaming?</div>
+                <p><strong>Cause &amp; Solution:</strong> This mid-game crash is often caused by dynamic 3D sound injection overload. Solution: Delete the <code>INSANITY</code> folder located inside your <code>modloader</code> directory, or remove <code>modloader.asi</code>.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q4: Experiencing slight lag or NVDA speech stuttering during heavy combat and crowded scenes?</div>
+                <p><strong>Technical Cause:</strong> This is normal and expected behavior. The Access layer performs high-frequency memory reads and streams rapid entity data to NVDA's <code>nvdaControllerClient32.dll</code>. When surrounded by dozens of peds, vehicles, and active projectiles, the IPC speech queue temporarily backs up, causing a brief stutter.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q5: Audio or radio cuts out after teleporting or marking destinations on the Map?</div>
+                <p><strong>Cause &amp; Solution:</strong> Occurs when the new world chunk loads faster than the game's audio streaming buffer. Simply press <kbd>Escape</kbd> to open the Pause Menu, then press <kbd>Escape</kbd> again to Resume. Audio will immediately restore.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q6: How can I inspect errors and debug issues independently?</div>
+                <p><strong>Solution:</strong> Check the <code>nvda_plugin.log</code> file located inside the <code>access</code> folder. It logs memory injection milestones, game states, and screen reader API calls in real-time, providing exact diagnostics for any unexpected error.</p>
+            </div>
         </article>
 
         <!-- Section 12 -->
         <article class="section-card">
-            <h2>[12] Download Links &amp; Development Resources:</h2>
+            <h2>[12] Tested &amp; Compatible GTA Versions:</h2>
+            <p>The Access mod has been thoroughly tested and confirmed fully functional on the original vanilla release of <strong>GTA San Andreas</strong> as well as the <strong>GTA Egypt</strong> modded edition.</p>
+            <p>I have not personally tested it on other mods or custom distributions, so you are welcome to test and share your results with me.</p>
+        </article>
+
+        <!-- Section 13 -->
+        <article class="section-card">
+            <h2>[13] Download Links &amp; Development Resources:</h2>
             <ul>
                 <li>
-                    <strong>GTA Access Mod Download (GTA_Access v2.6):</strong><br>
+                    <strong>GTA Access Mod Download (GTA_Access v2.6 Direct Release):</strong><br>
                     <a href="https://github.com/Ahmed-Hassan2006/GTA_SA_ACCESS/releases/download/2.6/GTA_Access_V2.6.zip" target="_blank" rel="noopener">Direct Download GTA_Access_V2.6.zip from GitHub</a>
                 </li>
                 <li>
                     <strong>Full Game Download (Vanilla Original):</strong><br>
-                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">Download Game from Archive.org</a>
+                    <em>Note: The main game installer/executable inside the downloaded archive is named <code>Setup.exe</code>.</em><br>
+                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">Download Full Game from Archive.org</a>
+                </li>
+                <li>
+                    <strong>Microsoft Official DirectX End-User Runtimes (June 2010):</strong><br>
+                    <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="noopener">Download DirectX 9.0c Package from Microsoft</a>
                 </li>
                 <li>
                     <strong>GTA Opcodes &amp; Scripting Documentation Repository:</strong><br>
@@ -452,9 +517,9 @@
             </ul>
         </article>
 
-        <!-- Section 13 -->
+        <!-- Section 14 -->
         <article class="section-card">
-            <h2>[13] Intellectual Property &amp; Terms of Use:</h2>
+            <h2>[14] Intellectual Property &amp; Terms of Use:</h2>
             <ul>
                 <li>This project was designed, coded, and developed entirely by: <strong>Ahmed Hassan Abdelnabi</strong>.</li>
                 <li><strong>Distribution &amp; Sharing:</strong> Open and welcome for sharing across all communities and platforms, provided full attribution to the author is retained.</li>
@@ -463,9 +528,9 @@
             </ul>
         </article>
 
-        <!-- Section 14 -->
+        <!-- Section 15 -->
         <article class="section-card">
-            <h2>[14] Contact, Support &amp; Feedback:</h2>
+            <h2>[15] Contact, Support &amp; Feedback:</h2>
             <p style="margin-bottom: 15px;">I always welcome your suggestions, feedback, and bug reports to help me continue developing and maintaining the Access mod:</p>
             
             <div class="contact-item">
@@ -488,7 +553,7 @@
     </main>
 
     <footer>
-        <p>GTA: San Andreas Access Project &copy; 2026 — Developed by Ahmed Hassan Abdelnabi</p>
+        <p>GTA: San Andreas Access Project &copy; 2026 — Developed &amp; Programmed by Ahmed Hassan Abdelnabi</p>
     </footer>
 </div>
 
