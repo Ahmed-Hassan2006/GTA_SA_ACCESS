@@ -33,7 +33,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 35px;
@@ -90,7 +90,7 @@
         h3 {
             color: var(--accent);
             font-size: 1.1rem;
-            margin: 15px 0 8px;
+            margin: 18px 0 8px;
         }
 
         ul, ol {
@@ -111,6 +111,20 @@
             font-size: 0.95rem;
             color: #0f172a;
             font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+            padding: 14px;
+            background-color: #f8fafc;
+            border-right: 4px solid var(--primary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
         }
 
         .warning-box {
@@ -220,7 +234,7 @@
             <ul>
                 <li><strong>في البداية:</strong> كان هدفي بسيطاً جداً ومحدوداً، وهو فقط جعل قارئ الشاشة ينطق نصوص القوائم الرئيسية.</li>
                 <li><strong>التوسع والتطوير:</strong> مع نجاح الخطوة الأولى، قررتُ عدم التوقف، وبدأتُ أطور المشروع خطوة بخطوة ليشمل فحص البيئة المحيطة، وتتبع الكائنات، والقتال، والملاحة، والخرائط.</li>
-                <li><strong>المراجع والتوثيق البرمجي:</strong> من خلال بحثي الشخصي واطلاعي المستمر، تمكنتُ من الوصول إلى المستودعات البرمجية المفتوحة المتخصصة في توثيق أوامر وسكربتات ألعاب جاتا (Opcodes &amp; Scripting Commands) على منصة GitHub والمواقع المتخصصة، والتي كانت دليلاً أساسياً لفهم آليات عمل المحرك الداخلية.</li>
+                <li><strong>المراجع والتوثيق البرمجي:</strong> من خلال بحثي الشخصي واطلاعي المستمر، تمكنتُ من الوصول إلى المستودعات البرمجية المفتوحة المتخصصة في توثيق أوامر وسكربتات ألعاب جاتا (Opcodes &amp; Scripting Commands) على منصة GitHub والمواقع التقنية المتخصصة، والتي كانت دليلاً أساسياً لفهم آليات عمل المحرك الداخلية.</li>
                 <li><strong>دور الذكاء الاصطناعي:</strong> استعنتُ بالذكاء الاصطناعي في تحليل بعض الصور ولقطات شاشة اللعبة لتوضيح بعض التفاصيل البصرية، والمساعدة في التفكير المنطقي لابتكار حلول لبعض العقبات.</li>
             </ul>
         </article>
@@ -308,8 +322,14 @@
             <ol>
                 <li>فك ضغط الملف باستخدام أي برنامج ضغط (مثل WinRAR أو 7-Zip).</li>
                 <li>انسخ مجلد <code>access</code>، وملف التشغيل (<code>.exe</code>) المرفق، وباقي ملفات الصوت والاستريو.</li>
-                <li>الصق جميع هذه الملفات في المجلد الرئيسي للعبة GTA San Andreas.</li>
-                <li>شغّل اللعبة من خلال ملف التشغيل المرفق (<code>.exe</code>) لتبدأ اللعبة مع طبقة الوصول مباشرة.</li>
+                <li>الصق جميع هذه الملفات داخل المجلد الرئيسي للعبة GTA San Andreas.</li>
+                <li>
+                    <strong>تنبيه برمجي شديد الأهمية:</strong> يجب التأكد من أن الملف التنفيذي للعبة المسمى في مجلد اللعبة مكتوب بحروف كبيرة تماماً (Uppercase) بهذا الشكل: <code>GTA_SA.exe</code> حتى يتعرف عليه الأكسس وحاقن العمليات (Process Hook) بنجاح.
+                </li>
+                <li>
+                    <strong>نصيحة عند التحديث:</strong> يُستحسن (كخطوة اختيارية ومفضلة) حذف ملفات السجل القديمة من داخل مجلد <code>access</code> مثل: <code>nvda_plugin.log</code> و <code>speech.log</code> حتى يتم إنشاء سجل نظيف وجديد للجلسة الحالية دون التراكم على السجلات السابقة.
+                </li>
+                <li>شغّل اللعبة من خلال ملف التشغيل لتبدأ اللعبة مع طبقة الوصول مباشرة.</li>
             </ol>
             <div class="warning-box">
                 <strong>ملاحظة هامة جداً بخصوص لغة الأكسس:</strong><br>
@@ -417,24 +437,69 @@
             </ul>
         </article>
 
-        <!-- القسم الحادي عشر -->
+        <!-- القسم الحادي عشر: الأسئلة الشائعة واستكشاف الأخطاء وإصلاحها -->
         <article class="section-card">
-            <h2>[11] نسخ GTA المتوافقة والمجربة:</h2>
-            <p>تمت تجربة طبقة الوصول بنجاح تام على النسخة الأصلية من GTA San Andreas وكذلك على نسخة جاتا المصرية (GTA Egypt).</p>
-            <p>لم أقم بتجربة الأكسس على باقي النسخ والتعديلات، لذا أرجو منكم التجربة ومشاركتي بنتائجكم.</p>
+            <h2>[11] الأسئلة الشائعة وحلول المشاكل التقنية (FAQ &amp; Troubleshooting):</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">س 1: اللعبة تطلب حزمة تشغيل قديمة أو تظهر رسالة خطأ متعلقة بـ DirectX / vorbisFile.dll؟</div>
+                <p><strong>السبب والحل البرمجي:</strong> تعتمد GTA: San Andreas على مكتبات <code>DirectX 9.0c</code> وخصائص <code>DirectPlay</code> القديمة. في أنظمة ويندوز الحديثة (مثل Windows 10 و Windows 11) يتم تضمين DirectX 12 فقط دون ملفات D3D9 القديمة. لحل هذه المشكلة:</p>
+                <ol>
+                    <li>تأكد من استبدال ملف <code>vorbisFile.dll</code> الأصلي بالملف المرفق مع حزمة الأكسس/اللعبة (ASI Loader).</li>
+                    <li>تأكد من تفعيل خاصية <strong>DirectPlay</strong> من خلال: <em>لوحة التحكم $\leftarrow$ البرامج والميزات $\leftarrow$ تشغيل ميزات Windows أو إيقاف تشغيلها $\leftarrow$ المكونات القديمة (Legacy Components) $\leftarrow$ DirectPlay</em>.</li>
+                    <li>إذا استمرت المشكلة، قم بتثبيت حزمة <strong>DirectX End-User Runtimes (June 2010)</strong> الرسمية من مايكروسوفت (مرفق رابطها في قسم الروابط أدناه).</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">س 2: اللعبة لا تفتح نهائياً أو تغلق فور بدء تشغيل عالم اللعبة (Crash on Startup)؟</div>
+                <p><strong>السبب والحل:</strong> بعض نسخ GTA المقرصنة أو المعدلة تحتوي على تعارض مباشر مع أداة حقن المودات <code>ModLoader</code>. الحل: ادخل إلى مجلد اللعبة الرئيسي واحذف (أو انقل) ملف <code>modloader.asi</code> ثم أعد تشغيل اللعبة مجدداً.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">س 3: حدوث كراش مفاجئ وخروج من اللعبة أثناء التجول داخل العالم واللعب؟</div>
+                <p><strong>السبب والحل:</strong> هذا الخروج المفاجئ يكون غالباً بسبب حزمة الأصوات الديناميكية ثلاثية الأبعاد وحقن الذاكرة الصوتي. الحل: احذف مجلد <code>INSANITY</code> الموجود داخل مجلد <code>modloader</code>، أو احذف ملف <code>modloader.asi</code>.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">س 4: حدوث تقطيع (Lag) أو بطء في استجابة قارئ الشاشة NVDA أثناء القتال والازدحام؟</div>
+                <p><strong>السبب البرمجي:</strong> هذا السلوك طبيعي ومتوقع تقنياً؛ حيث يقوم الأكسس بفحص مصفوفات الذاكرة في الوقت الفعلي ثم يرسل تدفقات نصية مكثفة وسريعة لمكتبة النطق <code>nvdaControllerClient32.dll</code>. عند وجود عدد هائل من المشاة والمركبات والطلقات في آن واحد، تتراكم نداءات الذاكرة مما يسبب بطئاً لحظياً خفيفاً.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">س 5: توقف أصوات اللعبة أو الراديو بعد الانتقال الفوري بالخريطة (Teleport)؟</div>
+                <p><strong>السبب والحل:</strong> يحدث هذا بسبب تحميل قطاعات الخريطة الجديدة بسرعة تفوق سرعة بث المحرك الصوتي. الحل ببساطة: اضغط على مفتاح <kbd>Escape</kbd> لتظهر قائمة اللعبة الرئيسية (Pause Menu)، ثم اضغط <kbd>Escape</kbd> مرة أخرى للاستئناف (Resume)، وستعود كافة الأصوات للعمل فوراً.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">س 6: كيف أقوم بتشخيص الأعطال وتتبع الأخطاء البرمجية بنفسي؟</div>
+                <p><strong>الحل:</strong> يحتوي مجلد <code>access</code> على ملف تشخيصي رئيسي يسمى <code>nvda_plugin.log</code>. يقوم هذا الملف بتسجيل تفاصيل حقن الذاكرة وحالة اللعبة واستدعاءات قارئ الشاشة لحظة بلحظة؛ لذا عند مواجهة أي مشكلة غير معتادة، افتح هذا الملف لمعرفة سبب الخطأ بدقة.</p>
+            </div>
         </article>
 
         <!-- القسم الثاني عشر -->
         <article class="section-card">
-            <h2>[12] روابط التحميل والمصادر البرمجية:</h2>
+            <h2>[12] نسخ GTA المتوافقة والمجربة:</h2>
+            <p>تمت تجربة طبقة الوصول بنجاح تام على النسخة الأصلية من GTA San Andreas وكذلك على نسخة جاتا المصرية (GTA Egypt).</p>
+            <p>لم أقم بتجربة الأكسس على باقي النسخ والتعديلات، لذا أرجو منكم التجربة ومشاركتي بنتائجكم.</p>
+        </article>
+
+        <!-- القسم الثالث عشر -->
+        <article class="section-card">
+            <h2>[13] روابط التحميل والمصادر البرمجية:</h2>
             <ul>
                 <li>
-                    <strong>رابط تحميل طبقة الوصول (GTA_Access الإصدار 2.6):</strong><br>
-                    <a href="https://github.com/Ahmed-Hassan2006/GTA_SA_ACCESS/releases/download/2.6/GTA_Access_V2.6.zip" target="_blank" rel="noopener">تحميل GTA_Access_V2.6.zip المباشر من GitHub</a>
+                    <strong>رابط تحميل طبقة الوصول (GTA_Access الإصدار 2.6 المباشر):</strong><br>
+                    <a href="https://github.com/Ahmed-Hassan2006/GTA_SA_ACCESS/releases/download/2.6/GTA_Access_V2.6.zip" target="_blank" rel="noopener">تحميل ملف GTA_Access_V2.6.zip المباشر من GitHub</a>
                 </li>
                 <li>
                     <strong>رابط تحميل اللعبة كاملة (النسخة الأصلية):</strong><br>
-                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">تحميل اللعبة من Archive.org</a>
+                    <em>ملاحظة: ملف تثبيت/تشغيل اللعبة الرئيسي داخل الأرشيف هو <code>Setup.exe</code>.</em><br>
+                    <a href="https://dn721504.ca.archive.org/0/items/gta-san-andreas-full-game/GTA%20San%20Andreas%20full%20game.zip" target="_blank" rel="noopener">تحميل اللعبة كاملة من Archive.org</a>
+                </li>
+                <li>
+                    <strong>حزمة مايكروسوفت الرسمية DirectX End-User Runtimes (June 2010):</strong><br>
+                    <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="noopener">تحميل حزمة DirectX 9.0c الرسمية من موقع Microsoft</a>
                 </li>
                 <li>
                     <strong>المستودع البرمجي لتوثيق أوامر وسكربتات جاتا (Sanny Builder Library):</strong><br>
@@ -452,9 +517,9 @@
             </ul>
         </article>
 
-        <!-- القسم الثالث عشر -->
+        <!-- القسم الرابع عشر -->
         <article class="section-card">
-            <h2>[13] حقوق الملكية الفكرية وسياسة الاستخدام:</h2>
+            <h2>[14] حقوق الملكية الفكرية وسياسة الاستخدام:</h2>
             <ul>
                 <li>هذا المشروع تم تصميمه وبرمجته وتطويره بالكامل بواسطة: <strong>أحمد حسن عبد النبي (Ahmed Hassan Abdelnabi)</strong>.</li>
                 <li><strong>المشاركة والنشر:</strong> متاح ومرحب بنشره ومشاركته في كل المجتمعات والمنصات مع الحفاظ الكامل على اسم المطور وحقوقه الأصلية.</li>
@@ -463,9 +528,9 @@
             </ul>
         </article>
 
-        <!-- القسم الرابع عشر -->
+        <!-- القسم الخامس عشر -->
         <article class="section-card">
-            <h2>[14] للتواصل والدعم الفني وتلقي الاقتراحات:</h2>
+            <h2>[15] للتواصل والدعم الفني وتلقي الاقتراحات:</h2>
             <p style="margin-bottom: 15px;">أرحبُ دائماً باقتراحاتكم، ملاحظاتكم، والإبلاغ عن أي أخطاء لتطوير وتحديث الأكسس مستقبلاً:</p>
             
             <div class="contact-item">
@@ -488,7 +553,7 @@
     </main>
 
     <footer>
-        <p>مشروع GTA: San Andreas Access &copy; 2026 — تطوير أحمد حسن عبد النبي</p>
+        <p>مشروع GTA: San Andreas Access &copy; 2026 — تطوير وبرمجة أحمد حسن عبد النبي</p>
     </footer>
 </div>
 
